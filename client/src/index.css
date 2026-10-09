@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 245 246 250;
+    --surface: 255 255 255;
+    --surface-2: 240 241 246;
+    --surface-3: 226 228 237;
+    --line: 228 230 238;
+    --ink: 17 19 34;
+    --muted: 103 108 133;
+    color-scheme: light;
+  }
+  body { @apply bg-bg font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-display tracking-tight; text-wrap: balance; }
+  ::selection { @apply bg-brand-500 text-white; }
+}
+
+@layer components {
+  .card { @apply rounded-2xl border border-line bg-surface shadow-card; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .scrollbar-thin { scrollbar-width: thin; scrollbar-color: rgb(var(--surface-3)) transparent; }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .kbd { @apply rounded-md border border-line bg-surface-2 px-1.5 py-0.5 font-mono text-[11px] text-muted; }
+}
