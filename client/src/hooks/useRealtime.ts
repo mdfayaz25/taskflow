@@ -43,7 +43,7 @@ export function useBoardRealtime(boardId?: string) {
       if (id !== boardId) return;
       toast.error('This board was deleted');
       qc.invalidateQueries({ queryKey: ['boards'] });
-      window.location.assign('/');
+      window.location.assign(import.meta.env.BASE_URL);
     };
 
     socket.on('task:upserted', onUpsert);

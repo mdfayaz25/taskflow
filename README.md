@@ -4,6 +4,9 @@
 
 **Real-time collaborative project management** — Kanban boards with drag and drop, team roles, deadlines, checklists, comments and live notifications over WebSockets.
 
+### [▶ Open the live demo](https://mdfayaz25.github.io/taskflow/)
+
+
 ![React](https://img.shields.io/badge/React_18-20232A?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Socket.io](https://img.shields.io/badge/Socket.io-010101?logo=socketdotio&logoColor=white)
@@ -15,6 +18,16 @@
 ![TaskFlow board](docs/screenshots/board.png)
 
 </div>
+
+## Live demo
+
+**[https://mdfayaz25.github.io/taskflow/](https://mdfayaz25.github.io/taskflow/)**
+
+The live demo is a static build of the same React app hosted on GitHub Pages. Because Pages can't run Node or MongoDB, the demo build swaps the HTTP and WebSocket layer for an in-browser backend (`client/src/demo/`) that implements the same REST routes and realtime events over sample data exported from the seed script. Everything you do is saved in your browser's localStorage; **Reset demo** in the top bar restores the sample data.
+
+Sign in with `fayaz@taskflow.dev` / `Demo@1234` (also `priya@`, `arjun@`, `neha@`, `karthik@` — same password).
+
+Build it yourself with `npm run build:pages` (output in `client/dist`). The `Deploy live demo` workflow publishes it to the `gh-pages` branch on every push to `main`.
 
 ## Features
 
